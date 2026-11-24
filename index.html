@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00e5e6",
+                        "background-light": "#f1f2f4",
+                        "background-dark": "#1c1f22",
+                        "surface-dark": "#2c3034",
+                        "vapor-violet": "#b734f7",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-button {
+            box-shadow: 0 0 20px rgba(0, 229, 230, 0.4);
+        }
+        .fluid-bg {
+            background: linear-gradient(135deg, #1c1f22 0%, #2c3034 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .fluid-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(183, 52, 247, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(0, 229, 230, 0.1) 0%, transparent 40%);
+            pointer-events: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white antialiased">
+<!-- Top Navigation Bar -->
+<div class="fixed top-0 left-0 right-0 z-50 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md p-4 justify-between border-b border-white/5">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
+    <span class="material-symbols-outlined">graphic_eq</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center">Sonic AI</h2>
+<div class="flex w-10 items-center justify-end">
+    <button id="userMenu">
+        <span class="material-symbols-outlined text-white" type="button">account_circle</span>
+        <select id="Inicio" class="bg-background-light dark:bg-background-dark text-white border border-white/10 rounded-lg px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+            <option value="es">Start</option>
+            <option value="en">Contact</option>
+            <option value="en">Help</option>
+            <option value="en">Close</option>
+        </select>
+    </button>
+
+    
+</div>
+</div>
+<!-- Main Content Area -->
+<main class="pt-20 pb-24 px-4 space-y-6">
+<!-- Hero Section -->
+<section class="@container">
+<div class="relative min-h-[520px] flex flex-col items-center justify-center rounded-xl p-6 text-center fluid-bg border border-white/10 shadow-2xl">
+<div class="absolute inset-0 opacity-20" data-alt="abstract digital sound wave patterns and nodes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCax3hdndF7pF9ts4tXV2SBfuuymhxuYWQhm6K87c-n7tsfKgjjAhNV7Vo51lJFiQR5fsaAXGNqEhHOF4-DgrUlEexPddBQfWepZBglm38WzsJeA73iCjCk9gSMflwiY7z9cT_RJPXjKiRtGasxYU0YdAlsJyXQAV7olXDCunFJ6rPGOcMkU7DkovT3VilH6jJYrqN3MXqnTzvuEQJZqX-g6eQN7bAWuf-D8fle8CkYHaSM0K46Cwjg5-jpvsvSTkqKkFycome0TbQ"); background-size: cover; mix-blend-mode: overlay;'></div>
+<div class="relative z-10 space-y-6 max-w-sm">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium uppercase tracking-widest text-primary">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                        Next Gen Engine
+                    </div>
+<h1 class="text-white text-5xl font-black leading-[1.1] tracking-tighter @[480px]:text-6xl">
+                        The Future <br/> of <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-vapor-violet">Sound</span>
+</h1>
+<p class="text-white/70 text-base font-normal leading-relaxed">
+                        "The best music is there, essentially, to give you something to face the world with. The music will remain today, tomorrow, and forever."
+                    </p>
+<div class="flex flex-col gap-3 pt-4">
+<button id="btn-action" class="flex items-center justify-center rounded-xl h-12 bg-primary text-background-dark text-sm font-bold transition-transform active:scale-95" type="button">
+                            >
+                            <a href="https://www.youtube.com" target="_blank">Get Started</a>
+                        </button>
+                            
+<button class="flex items-center justify-center rounded-xl h-12 bg-white/5 text-white text-sm font-semibold border border-white/10 hover:bg-white/10 transition-colors" type="button">
+                            Watch Process
+                        </button>
+</div>
+</div>
+<!-- Subtle visualizer effect -->
+<div class="absolute bottom-0 left-0 right-0 h-16 flex items-end justify-center gap-1 pb-4 px-8 opacity-30">
+<div class="w-1 bg-primary h-4 rounded-full"></div>
+<div class="w-1 bg-primary h-8 rounded-full"></div>
+<div class="w-1 bg-primary h-12 rounded-full"></div>
+<div class="w-1 bg-primary h-6 rounded-full"></div>
+<div class="w-1 bg-primary h-10 rounded-full"></div>
+<div class="w-1 bg-primary h-4 rounded-full"></div>
+<div class="w-1 bg-primary h-8 rounded-full"></div>
+</div>
+</div>
+</section>
+<!-- Section Header -->
+<div class="flex items-center justify-between px-2 pt-4">
+<h3 class="text-white text-xl font-bold tracking-tight">My best music playlist</h3>
+<span class="text-primary text-xs font-bold uppercase tracking-widest cursor-pointer">View All</span>
+</div>
+<!-- Text Grid (Genres/Styles) -->
+<div class="grid grid-cols-2 gap-3">
+<div class="flex gap-3 rounded-lg border border-white/5 bg-surface-dark p-4 items-center hover:border-primary/50 transition-all cursor-pointer group">
+<div class="text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">waves</span>
+</div>
+                   <a href="https://www.youtube.com/watch?v=D9NWwwX0X3Q&list=RDD9NWwwX0X3Q&start_radio=1" target="_blank" class="text-white text-sm font-bold">Urban</a>
+</div>
+<div class="flex gap-3 rounded-lg border border-white/5 bg-surface-dark p-4 items-center hover:border-primary/50 transition-all cursor-pointer group">
+<div class="text-vapor-violet group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<a href="https://www.youtube.com/watch?v=2kpAzC2Mja8&list=RD2kpAzC2Mja8&start_radio=1" target="_blank" class="text-white text-sm font-bold">Electronics</a>
+</div>
+<div class="flex gap-3 rounded-lg border border-white/5 bg-surface-dark p-4 items-center hover:border-primary/50 transition-all cursor-pointer group">
+<div class="text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">grid_view</span>
+</div>
+<a href="https://www.youtube.com/watch?v=qm-Tb__XA-k&list=RDqm-Tb__XA-k&start_radio=1" target="_blank" class="text-white text-sm font-bold">Salsa</a>
+</div>
+<div class="flex gap-3 rounded-lg border border-white/5 bg-surface-dark p-4 items-center hover:border-primary/50 transition-all cursor-pointer group">
+<div class="text-vapor-violet group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">nightlight</span>
+</div>
+<a href="https://www.youtube.com/watch?v=qMPfnQ2oMGE&list=RDqMPfnQ2oMGE&start_radio=1" target="_blank" class="text-white text-sm font-bold">Ballad</a>
+</div>
+</div>
+<!-- AI Mastering Card -->
+<div class="pt-2">
+<div class="flex items-stretch justify-between gap-4 rounded-xl bg-surface-dark p-4 border border-white/5 shadow-xl overflow-hidden relative">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl rounded-full -mr-16 -mt-16"></div>
+<div class="flex flex-[1.5] flex-col justify-between gap-6 z-10">
+<div class="space-y-1">
+<p class="text-white text-lg font-bold leading-tight">Neural Mastering</p>
+<p class="text-white/50 text-xs font-normal leading-normal">Professional-grade polish using adaptive frequency analysis.</p>
+</div>
+<button class="flex items-center justify-center rounded-lg h-9 px-4 bg-white/10 text-white text-xs font-bold w-fit border border-white/10 hover:bg-primary hover:text-background-dark transition-all">
+                        Launch Engine
+                    </button>
+</div>
+<div class="flex-1 min-h-[100px] bg-center bg-cover rounded-lg border border-white/10" data-alt="close up of digital audio editing console with neon highlights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBIqjPEVwjFy7VD5-BDjbrhUd3rOeI-Y9YzEJiTlNFSP1w6bh95cLkQTgctZ8XP9l4uLSZrMbLTtT_8P_N6mye_m7LiVcgUy1MTzMQjCAkNbbfXk8zq_8-OlGTSV35wHVoC4KCuFSfdY7kbaerfps3d3T2f-BGJ4d0hQhoWn2YekpU9wkZ46cBuypU6HLNAS8DzwF_wyOKkxn6P_y8j07nKAZFTzRhJn1yK31u4bbdnR6KuxAFZornl-CBtAE27kGXwrDID6ZmZfXI");'></div>
+</div>
+</div>
+</main>
+<!-- Bottom Tab Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-xl border-t border-white/5 px-6 pb-6 pt-3 flex justify-between items-center">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-white/40">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Explore</span>
+</button>
+<div class="relative -mt-12">
+<button class="flex items-center justify-center size-14 rounded-full bg-primary text-background-dark shadow-[0_0_25px_rgba(0,229,230,0.5)] border-4 border-background-dark">
+<span class="material-symbols-outlined font-black">add</span>
+</button>
+</div>
+<button class="flex flex-col items-center gap-1 text-white/40">
+<span class="material-symbols-outlined">library_music</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Library</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-white/40">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Studio</span>
+</button>
+</nav>
+</body></html>
